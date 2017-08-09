@@ -13,20 +13,31 @@ header, footer{
 }
 .canvas-wrap{
 	min-width: 400px;
+	padding: 0px;
+}
+#score{
+	font-size: 7rem;
+}
+#score-box div:first-child, #start{
+	font-size: 2rem;
 }
 canvas{
 	border-bottom: 3px solid red;
 	background-color: #dbeef2;
+	min-width: 400px !important;
+	max-width: 400px !important;
+	width: 400px !important;
 }
 .main{
 	padding: 4rem 0;
 }
-.score{
+#score-box{
+	border-radius: 5px;
+	padding-top: 29px;
 	background-color: #fff;
+	box-shadow: inset 0px 0px 28px 5px #ffffff;
+	padding-bottom: 10px;
 }
-@keyframes ouch{
-	from {background-color: #fff; background-color: #f00;}
-}
-@keyframes yeah{
-	from {background-color: #fff; background-color: #0f0;}
+#start{
+	height: 200px;
 }

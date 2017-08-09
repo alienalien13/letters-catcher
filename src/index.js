@@ -1,5 +1,6 @@
 import './equalize.min.css'
 import './style.css'
+import './jquery-color.js'
 
 window.onload = function(){
 
@@ -29,21 +30,25 @@ window.onload = function(){
 	function addRect(){
 
 		var rand = Math.random() * (60 - 30) + 30,
-			randX = Math.random() * 380,
+			randY = Math.random() * (40 - 20) + 20,
+			randX = Math.random() * 375,
 			randSpeedY = Math.random() * 1.8 + 0.3,
 			letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
 			randColor1 = ( Math.floor( Math.random() * (10 - 1.0001) ) + 1 ) || letters[ Math.floor( Math.random() * 6 ) ],
 			randColor2 = ( Math.floor( Math.random() * (10 - 1.0001) ) + 1 ) || letters[ Math.floor( Math.random() * 6 ) ],
 			randColor3 = ( Math.floor( Math.random() * (10 - 1.0001) ) + 1 ) || letters[ Math.floor( Math.random() * 6 ) ];
-		/** 
-			*1: new Rect with random posX,
-			*2: posY = 0,
-			*3, 4: random weight=height,
-			*5: 0 - change speed x,
-			*6: 1 - change speed y,
-			*7: random letter 
+			
+		/**
+		    * rect options:
+			*	1: new Rect with random posX,
+			*	2: posY = 0,
+			*	3, 4: random weight=height,
+			*	5: 0 - change speed x,
+			*	6: 1 - change speed y,
+			*	7: random letter,
+			*	8, 9, 10: color: '# + randColor1 + randColor2 + randColor3'
 		**/
-		var rect = new Rect(randX, 0, rand, rand, 0, randSpeedY, letters[ Math.floor( Math.random() * 10 ) ], randColor1, randColor2, randColor3);
+		var rect = new Rect(randX, randY, rand, rand, 0, randSpeedY, letters[ Math.floor( Math.random() * 10 ) ], randColor1, randColor2, randColor3);
 
 		//add new rect to the rects array
 		rects.push(rect);
@@ -51,7 +56,7 @@ window.onload = function(){
 
 	//draw actuall rects array
 	function draw(){
-		$('#score').css('animation', '');
+		
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		context.beginPath();
 
@@ -62,10 +67,14 @@ window.onload = function(){
 			rect.y += rect.dy;
 
 			if(rect.y > 399) { //if rect falls down
+				
 				rects.splice(i, 1);
 				score--;
 				scoreDiv.innerText = score;
-				$('#score').css('animation', 'ouch linear 1s');
+				$('#score-box').animate({backgroundColor: '#F00'}, 100, function(){
+					$('#score-box').animate({backgroundColor: '#FFF'})
+				});
+
 			}
 
 			context.font= rect.w - 11 + "px Georgia";
@@ -89,7 +98,7 @@ window.onload = function(){
 		var time1 = setInterval(function(){
 			addRect();
 			if (buttonState) clearInterval(time1)
-		}, 800 )
+		}, 700 )
 
 		//draw actuall array in canvas every 30 msec
 		var time2 = setInterval(function(){
@@ -135,7 +144,9 @@ window.onload = function(){
 
 			score++;
 			scoreDiv.innerText = score;
-			$('#score').css('animation', 'yeah linear 1s');
+			$('#score-box').animate({backgroundColor: '#0F0'}, 100, function(){
+				$('#score-box').animate({backgroundColor: '#FFF'})
+			});
 
 			for(let i=0; i<iToRemove.length; i++){
 
