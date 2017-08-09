@@ -1,5 +1,5 @@
-import './style.css'
 import './equalize.min.css'
+import './style.css'
 
 window.onload = function(){
 
@@ -29,7 +29,7 @@ window.onload = function(){
 	function addRect(){
 
 		var rand = Math.random() * (60 - 30) + 30,
-			randX = Math.random() * 390,
+			randX = Math.random() * 380,
 			randSpeedY = Math.random() * 1.8 + 0.3,
 			letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
 			randColor1 = ( Math.floor( Math.random() * (10 - 1.0001) ) + 1 ) || letters[ Math.floor( Math.random() * 6 ) ],
@@ -51,7 +51,7 @@ window.onload = function(){
 
 	//draw actuall rects array
 	function draw(){
-
+		$('#score').css('animation', '');
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		context.beginPath();
 
@@ -65,7 +65,7 @@ window.onload = function(){
 				rects.splice(i, 1);
 				score--;
 				scoreDiv.innerText = score;
-				$('#score').css('animation', 'ouch 1s')
+				$('#score').css('animation', 'ouch linear 1s');
 			}
 
 			context.font= rect.w - 11 + "px Georgia";
@@ -135,6 +135,7 @@ window.onload = function(){
 
 			score++;
 			scoreDiv.innerText = score;
+			$('#score').css('animation', 'yeah linear 1s');
 
 			for(let i=0; i<iToRemove.length; i++){
 

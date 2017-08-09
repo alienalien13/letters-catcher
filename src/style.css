@@ -21,9 +21,12 @@ canvas{
 .main{
 	padding: 4rem 0;
 }
-#score{
+.score{
 	background-color: #fff;
 }
 @keyframes ouch{
-	from {background-color: #fff; background-color: #f00 .8;}
+	from {background-color: #fff; background-color: #f00;}
+}
+@keyframes yeah{
+	from {background-color: #fff; background-color: #0f0;}
 }
