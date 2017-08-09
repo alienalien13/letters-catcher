@@ -1,0 +1,16 @@
+#cnv{
+	border: 1px solid black
+}
+.canvas-wrap{
+	display: block;
+	float:left;
+}
+.btns-score-wrap{
+	display: block;
+	float:left;
+	margin-left: 20px;
+}
+#start{
+	height: 50px;
+	width: 50px;
+}

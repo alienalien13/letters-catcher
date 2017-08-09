@@ -1,0 +1,29 @@
+:root{
+	--main-color: #58b0c2;
+	--head-foot-height: 50px;
+}
+article{
+	width: 100%;
+	min-height: 400px;
+}
+header, footer{
+	width: 100%;
+	height: var(--head-foot-height);
+	background-color: var(--main-color);
+}
+.canvas-wrap{
+	min-width: 400px;
+}
+canvas{
+	border-bottom: 3px solid red;
+	background-color: #dbeef2;
+}
+.main{
+	padding: 4rem 0;
+}
+#score{
+	background-color: #fff;
+}
+@keyframes ouch{
+	from {background-color: #fff; background-color: #f00 .8;}
+}
