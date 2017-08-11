@@ -71,7 +71,7 @@ window.onload = function(){
 				rects.splice(i, 1);
 				score--;
 				scoreDiv.innerText = score;
-				$('#score-box').animate({backgroundColor: '#F00'}, 100, function(){
+				$('#score-box').animate({backgroundColor: '#F00'}, 50, function(){
 					$('#score-box').animate({backgroundColor: '#FFF'})
 				});
 
@@ -144,7 +144,7 @@ window.onload = function(){
 
 			score++;
 			scoreDiv.innerText = score;
-			$('#score-box').animate({backgroundColor: '#0F0'}, 100, function(){
+			$('#score-box').animate({backgroundColor: '#0F0'}, 50, function(){
 				$('#score-box').animate({backgroundColor: '#FFF'})
 			});
 
