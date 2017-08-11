@@ -10,8 +10,23 @@
 </head>
 <body>
 
-	<header class=''>
-
+	<header>
+		<aside class="container">
+			<div class="row around-xs">
+				<div class="container">
+					<div class="row header-info">
+						<div class="col-xs-6">
+							<div class="logo"></div>
+						</div>
+						<div class="col-xs-6 row end-xs">
+							<div class="col-xs-12">
+								<h1>Cath the letter!</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
 	</header>
 
 	<article class='container'>
@@ -75,7 +90,13 @@
 			</div>
 			<div class='btns-score-wrap col-xs-3'>
 				<div class="row">
-					<input id='start' class='col-xs-12' type="button" value="Start/Stop">
+					<div id="start-wrap" class="col-xs-12">
+						<span id="start" class="toggle">
+							<input type="checkbox">
+							<input class="vis" type="checkbox">
+							<label data-off="Stop" data-on="Play"></label>
+						</span>
+					</div>
 				</div>
 				
 				<div class="row" id="score-box">

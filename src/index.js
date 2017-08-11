@@ -1,4 +1,5 @@
 import './equalize.min.css'
+import './button.css'
 import './style.css'
 import './jquery-color.js'
 
@@ -72,12 +73,12 @@ window.onload = function(){
 				score--;
 				scoreDiv.innerText = score;
 				$('#score-box').animate({backgroundColor: '#F00'}, 50, function(){
-					$('#score-box').animate({backgroundColor: '#FFF'})
+					$('#score-box').animate({backgroundColor: '#eee'})
 				});
 
 			}
 
-			context.font= rect.w - 11 + "px Georgia";
+			context.font= rect.w - 11 + "px Lucida Console";
 			context.fillStyle = (('#' + rect.randColor1) + rect.randColor2) + rect.randColor3;
 			context.fillText(rect.letter, rect.x, rect.y)
 			context.fill();
@@ -145,7 +146,7 @@ window.onload = function(){
 			score++;
 			scoreDiv.innerText = score;
 			$('#score-box').animate({backgroundColor: '#0F0'}, 50, function(){
-				$('#score-box').animate({backgroundColor: '#FFF'})
+				$('#score-box').animate({backgroundColor: '#eee'})
 			});
 
 			for(let i=0; i<iToRemove.length; i++){

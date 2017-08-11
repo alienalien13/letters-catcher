@@ -1,6 +1,16 @@
 :root{
 	--main-color: #58b0c2;
-	--head-foot-height: 50px;
+	--head-foot-height: 100px;
+}
+html{
+	font-family: Lucida Console, sans-serif;
+}
+h1{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+body {
+  background-color:#eee;
 }
 article{
 	width: 100%;
@@ -11,15 +21,22 @@ header, footer{
 	height: var(--head-foot-height);
 	background-color: var(--main-color);
 }
+.header-info{
+	height: 40px;
+	margin: 30px 16px;
+}
 .canvas-wrap{
 	min-width: 400px;
 	padding: 0px;
 }
 #score{
-	font-size: 7rem;
+	font-size: 4rem;
 }
 #score-box div:first-child, #start{
 	font-size: 2rem;
+}
+#score-box div{
+	height: 100px;
 }
 canvas, .cnv{
 	min-width: 400px !important;
@@ -34,15 +51,14 @@ canvas{
 }
 #score-box{
 	border-radius: 5px;
-	padding-top: 29px;
-	background-color: #fff;
-	box-shadow: inset 0px 0px 28px 5px #ffffff;
-	padding-bottom: 10px;
+ 	background-color: #eee;
+	box-shadow: inset 0px 0px 128px -15px #eee;
+	width: 100%;
+	margin: 0;
 }
-#start{
+#start-wrap{
 	height: 200px;
 }
-
 .triengles-wrap{
 	position: relative;
 	top: -32px;
@@ -55,4 +71,22 @@ canvas{
 	border-bottom: 10px solid #dc0e13;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
+}
+
+.logo{
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid red;
+	border-left: 20px solid blue;
+	border-top: 20px solid yellow;
+	border-right: 20px solid green;
+}
+.logo::after{
+	content: 'Letters catcher';
+	position: absolute;
+	left: 1.5rem;
+	top: -0.63rem;
+	width: 10rem;
+	font-family: Lucida Console, sans-serif;
 }

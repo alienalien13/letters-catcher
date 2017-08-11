@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script scr='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
 	<title>Document</title>
 <link href="./style.css" rel="stylesheet"></head>
@@ -16,13 +16,72 @@
 
 	<article class='container'>
 
-		<section class="main row">
-			<div class='canvas-wrap col-xs-4 col-xs-offset-2'>
-				<canvas id='cnv' width="400" height="400"></canvas>
+		<section class="main row around-xs">
+			
+			<div class='canvas-wrap row col-xs-6 row-reverse between-lg'>
+				
+				<div class="cnv col-xs-12 col-sm-12 col-md-12 col-lg-7">
+				<canvas id='cnv' class='' width="400" height="400"></canvas>
+					<div class="triengles-wrap">
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+							<div class="triengle"></div>
+					</div>
+				</div>
+
+				<div class="instr col-xs-12 col-sm-12 col-md-10 col-lg-3">
+					<p>
+						instruction instru ctioninstruction ins tructioninstruction instruct ioninstruction instr uc tio ninstructi on instructioninstruction instructioninst ruction instructioninstruction in struc tion ins truction instructioninstruction instruction
+					</p>
+				</div>
+
 			</div>
-			<div class='btns-score-wrap col-xs-2'>
-				<input id='start' type="button" value="Start/Stop">
-				<div>Score:</div><div id="score"></div>
+			<div class='btns-score-wrap col-xs-3'>
+				<div class="row">
+					<input id='start' class='col-xs-12' type="button" value="Start/Stop">
+				</div>
+				
+				<div class="row" id="score-box">
+					<div class='col-xs-12'>Your score:</div>
+					<div class='col-xs-12' id="score"></div>
+				</div>
 			</div>
 		</section>
 
