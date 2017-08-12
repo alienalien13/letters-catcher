@@ -1,16 +1,22 @@
 :root{
-	--main-color: #58b0c2;
+	--main-color: #5695be;
 	--head-foot-height: 100px;
 }
 html{
-	font-family: Lucida Console, sans-serif;
+	font-family: Verdana, sans-serif;
 }
 h1{
 	padding: 0 !important;
 	margin: 0 !important;
+	word-wrap: normal;
 }
 body {
-  background-color:#eee;
+	background-color:#eee;
+}
+h1{
+	word-wrap: normal;
+	color: white;
+	text-transform: uppercase;
 }
 article{
 	width: 100%;
@@ -18,8 +24,13 @@ article{
 }
 header, footer{
 	width: 100%;
-	height: var(--head-foot-height);
 	background-color: var(--main-color);
+}
+header{
+	box-shadow:0 2px 3px rgba(0,0,0,0.4),
+		0 3px 1px #5586be,
+		0 5px 1px #6ec9d9,
+		0 6px 0 white;
 }
 .header-info{
 	height: 40px;
@@ -45,9 +56,6 @@ canvas, .cnv{
 }
 canvas{
 	background-color: #dbeef2;
-}
-.main{
-	padding: 4rem 0;
 }
 #score-box{
 	border-radius: 5px;
@@ -86,7 +94,23 @@ canvas{
 	content: 'Letters catcher';
 	position: absolute;
 	left: 1.5rem;
-	top: -0.63rem;
+	top: -1.2rem;
 	width: 10rem;
 	font-family: Lucida Console, sans-serif;
+	font-size: 1.2rem;
+	color: white;
+}
+.we{
+	height: 40px;
+}
+.rules-wrap{
+	padding: 1rem 0;
+
+}
+.rules{
+	border: 1px solid var(--main-color);
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	text-align: justify;
 }
