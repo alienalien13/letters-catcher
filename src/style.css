@@ -104,13 +104,12 @@ canvas{
 	height: 40px;
 }
 .rules-wrap{
-	padding: 1rem 0;
-
+	padding: 3rem 0;
 }
 .rules{
 	border: 1px solid var(--main-color);
-	padding: 5px;
-	border-radius: 5px;
+	padding: 1.6rem 2rem 2rem 0.8rem;
+	border-radius: 2rem;
 	background-color: #e4e4e4;
 	text-align: justify;
 }
