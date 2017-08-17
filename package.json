@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node app.js",
     "serv": "webpack-dev-server --env development",
+    "deploy": "git add . && git commit -a -m 'autocommit' && git push heroku master && heroku ps:scale web=1 && heroku open",
     "prod": "rimraf ./dist && webpack --env production"
   },
   "devDependencies": {

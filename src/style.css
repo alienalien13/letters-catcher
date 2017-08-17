@@ -113,3 +113,9 @@ canvas{
 	background-color: #e4e4e4;
 	text-align: justify;
 }
+
+footer{
+	padding: 2rem;
+	margin-top: 50px;
+	color: white;
+}
