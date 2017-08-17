@@ -3,7 +3,8 @@ const webpack = require('webpack'),
 	HtmlPlugin = require('html-webpack-plugin'),
 	ExtractTextPlugin = require('extract-text-webpack-plugin'),
 	merge = require('webpack-merge'),
-	UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+	UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
+	autoprefixer = require('autoprefixer')
 
 
 const PATHS = {
@@ -67,7 +68,10 @@ const prod = merge(
 					test: /\.css$/,
 					use: ExtractTextPlugin.extract({
 						use: [
-							'css-loader',
+							{ 
+								loader: 'css-loader', 
+								options : { autoprefixer: false, sourceMap: true, importLoaders: 1 } 
+							}, 
 							'postcss-loader'
 						]
 					})					
