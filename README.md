@@ -1,1 +1,1 @@
-https://letters-catcher.herokuapp.com
+https://letters-catcher.herokuapp.com/
